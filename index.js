@@ -28,11 +28,11 @@ const client = new Client({
 });
 
 // Configuration - Now configurable via environment variables
-let QUARANTINE_ROLE_ID = process.env.QUARANTINE_ROLE_ID || '1414353103842443418';
-const LOGS_CHANNEL_ID = '1416726945965543485'; // Anti-nuke log channel
-const STATS_CHANNEL_ID = '1386737879425744906';
-const MEMBER_INFO_CHANNEL_ID = '1328020268299583510';
-let ADMIN_QUARANTINE_CHANNEL_ID = process.env.ADMIN_QUARANTINE_CHANNEL_ID || '1415691533956415588'; // Owner Commands channel
+let QUARANTINE_ROLE_ID = process.env.QUARANTINE_ROLE_ID || '1404869933430738974';
+const LOGS_CHANNEL_ID = '1414314595111145583'; // Anti-nuke log channel
+const STATS_CHANNEL_ID = '1406918820165193758';
+const MEMBER_INFO_CHANNEL_ID = '1408878114616115231';
+let ADMIN_QUARANTINE_CHANNEL_ID = process.env.ADMIN_QUARANTINE_CHANNEL_ID || '1411976704016121896'; // Owner Commands channel
 const DEFAULT_QUARANTINE_DURATION = 5; // 5 minutes
 const STRICT_MEMBER_INFO_QUARANTINE_DURATION = 15; // 15 minutes for strict mode
 
@@ -286,9 +286,9 @@ const PROTECTION_SETTINGS = {
 const userActionTracking = new Map(); // userId -> { actions: [], lastReset: timestamp }
 
 // Interim Role Manager Configuration
-const INTERIM_ROLE_CHANNEL_ID = '1415243234703310958';
-const INTERIM_ROLE_ID = '1415243793300586586';
-const OWNER_CHANNEL_ID = '1380640369506521258'; // Owner Commands channel
+const INTERIM_ROLE_CHANNEL_ID = '1409246212502196376';
+const INTERIM_ROLE_ID = '1409244307767955586';
+const OWNER_CHANNEL_ID = '1410011813398974626'; // Owner Commands channel
 const INTERIM_ROLE_DURATION = 10; // 10 minutes in minutes
 // Store interim role tracking - no limit on uses, but track for timeout management
 const interimRoleTimeouts = new Map(); // userId -> timeoutId for auto-removal
@@ -399,11 +399,11 @@ async function sendLogMessage(guild, embed, components = [], logType = 'general'
     try {
         // Define specific channel IDs for different log types
         const logChannels = {
-            voice: '1386737879425744906',        // Voice events (joins, leaves, moves, switches)
-            role: '1415691533956415588',         // Role updates and member changes
-            ban: '1386453976740008069',          // Ban and unban events
-            quarantine: '1386450892462624869',   // Quarantine and timeout events
-            general: '1380639209299116073'       // Default owner logs channel
+            voice: '1411976190998220891',        // Voice events (joins, leaves, moves, switches)
+            role: '1411976584990298203',         // Role updates and member changes
+            ban: '1411976704016121896',          // Ban and unban events
+            quarantine: '1378464794499092581',   // Quarantine and timeout events
+            general: '1410019894568681617'       // Default owner logs channel
         };
 
         // Select the appropriate channel based on log type
