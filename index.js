@@ -24,7 +24,7 @@ const client = new Client({
 // Configuration - Now configurable via environment variables
 let QUARANTINE_ROLE_ID = process.env.QUARANTINE_ROLE_ID || '1404869933430738974';
 const LOGS_CHANNEL_ID = '1410019894568681617'; // Owner logs channel
-const STATS_CHANNEL_ID = '1406918820165193758';
+const STATS_CHANNEL_ID = '1378464794499092581';
 const MEMBER_INFO_CHANNEL_ID = '1408878114616115231';
 let ADMIN_QUARANTINE_CHANNEL_ID = process.env.ADMIN_QUARANTINE_CHANNEL_ID || '1410011813398974626'; // Owner Commands channel
 const DEFAULT_QUARANTINE_DURATION = 5; // 5 minutes
